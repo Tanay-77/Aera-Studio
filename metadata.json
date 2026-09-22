@@ -1,0 +1,6 @@
+{
+  "name": "MØDE Studio",
+  "description": "Independent fashion photography & creative direction studio. Editorial, campaigns, and art direction.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
