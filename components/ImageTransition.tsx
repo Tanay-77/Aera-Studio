@@ -40,61 +40,34 @@ export default function ImageTransition() {
 
       // Initially:
       // Slide 1 (Hero: Flower Eyes) is at top.
-      // Slide 2 (Pink Peony Macro) enters from bottom (clip-path or yPercent)
-      gsap.set(slide2Ref.current, { yPercent: 100, clipPath: 'inset(0% 0% 0% 0%)' });
-      gsap.set(slide3Ref.current, { yPercent: 100 });
-      gsap.set(slide4Ref.current, { yPercent: 100 });
+      // Slide 2, 3, 4 are clipped out at the bottom
+      gsap.set(slide2Ref.current, { clipPath: 'inset(100% 0% 0% 0%)', zIndex: 10 });
+      gsap.set(slide3Ref.current, { clipPath: 'inset(100% 0% 0% 0%)', zIndex: 20 });
+      gsap.set(slide4Ref.current, { clipPath: 'inset(100% 0% 0% 0%)', zIndex: 30 });
 
-      // STEP 1: Slide 2 (Pink Peony) enters from bottom, covering Slide 1
-      // Matches Screenshot 2!
+      // STEP 1: Slide 2 enters via clip-path reveal
       tl.to(slide2Ref.current, {
-        yPercent: 0,
+        clipPath: 'inset(0% 0% 0% 0%)',
         ease: 'none',
         duration: 1,
       }, 0);
 
-      // Text 1 fades out, Text 2 enters
-      tl.to(text1Ref.current, { opacity: 0, duration: 0.4 }, 0.2);
-      tl.fromTo(
-        text2Ref.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.6 },
-        0.5
-      );
 
-      // STEP 2: Slide 3 (Blue Sky Clouds) enters from bottom, covering Slide 2
-      // Matches Screenshot 3!
+      // STEP 2: Slide 3 enters via clip-path reveal
       tl.to(slide3Ref.current, {
-        yPercent: 0,
+        clipPath: 'inset(0% 0% 0% 0%)',
         ease: 'none',
         duration: 1,
       }, 1);
 
-      // Text 2 fades out, Text 3 enters
-      tl.to(text2Ref.current, { opacity: 0, duration: 0.4 }, 1.2);
-      tl.fromTo(
-        text3Ref.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.6 },
-        1.5
-      );
 
-      // STEP 3: Slide 4 (Asymmetric Red Dress Triptych + Red Silk Fabric) enters
-      // Matches Screenshot 4!
+      // STEP 3: Slide 4 enters via clip-path reveal
       tl.to(slide4Ref.current, {
-        yPercent: 0,
+        clipPath: 'inset(0% 0% 0% 0%)',
         ease: 'none',
         duration: 1,
       }, 2);
 
-      // Text 3 fades out, Text 4 enters
-      tl.to(text3Ref.current, { opacity: 0, duration: 0.4 }, 2.2);
-      tl.fromTo(
-        text4Ref.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.6 },
-        2.5
-      );
     }, container);
 
     return () => ctx.revert();
