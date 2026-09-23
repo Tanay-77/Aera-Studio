@@ -126,7 +126,7 @@ export default function ImageTransition() {
         className="absolute inset-0 w-full h-full will-change-transform z-10 shadow-2xl"
       >
         <Image
-          src="/images/pink_peony_macro.jpg"
+          src="/images/sec.png"
           alt="AERA Studio - Pink Peony Macro Editorial"
           fill
           sizes="100vw"
@@ -138,20 +138,20 @@ export default function ImageTransition() {
         {/* Text 2: Matches Screenshot 2 text */}
         <div
           ref={text2Ref}
-          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex items-center justify-between text-slate-700 md:text-slate-800 text-lg sm:text-xl md:text-2xl tracking-wide font-light z-20 pointer-events-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]"
+          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex items-center justify-between text-[#e3e1d9] text-lg sm:text-xl md:text-2xl tracking-wide font-light z-20 pointer-events-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]"
         >
           <div className="flex items-center space-x-2">
-            <span className="font-normal text-slate-900">AERA Studio</span>
+            <span>AERA</span>
             <span className="opacity-60">◦</span>
             <span className="text-sm sm:text-base md:text-lg">アエラ</span>
-            <span className="opacity-40 hidden md:inline">|</span>
-            <span className="hidden md:inline">AERA Studio</span>
+
+
           </div>
 
           <div className="text-right flex items-center space-x-2 sm:space-x-3">
-            <span className="text-teal-700 font-normal">Brand Identity</span>
+            <span>Fashion</span>
             <span className="opacity-50">◦</span>
-            <span>Website Design</span>
+            <span>Photography</span>
             <span className="opacity-50">◦</span>
             <span>Creative Direction</span>
           </div>
@@ -178,23 +178,23 @@ export default function ImageTransition() {
         {/* Text 3: Matches Screenshot 3 text (Left: AERA Studio · Services, Center: Visual direction..., Right: Brand Identity...) */}
         <div
           ref={text3Ref}
-          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 text-lg sm:text-xl md:text-2xl tracking-wide font-light z-20 pointer-events-none"
+          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 text-white/80 text-lg sm:text-xl md:text-2xl tracking-wide font-light z-20 pointer-events-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
         >
           {/* Left: Rust / Terracotta accent text as seen in screenshot 3 */}
-          <div className="flex items-center space-x-2 text-amber-800 font-normal">
+          <div className="flex items-center space-x-2">
             <span>AERA Studio</span>
             <span className="opacity-60">◦</span>
             <span>Services</span>
           </div>
 
           {/* Center text: Dark charcoal */}
-          <div className="text-left md:text-center text-neutral-900 max-w-md font-normal">
+          <div className="text-left md:text-center max-w-md">
             Visual direction and systems built around the brand.
           </div>
 
           {/* Right text: Brand Identity / Web Design */}
-          <div className="text-right flex items-center space-x-2 sm:space-x-3 text-neutral-700">
-            <span className="text-neutral-900 font-medium">Brand Identity</span>
+          <div className="text-right flex items-center space-x-2 sm:space-x-3">
+            <span>Brand Identity</span>
             <span className="opacity-60">◦</span>
             <span>Website Design</span>
             <span className="opacity-60">◦</span>
@@ -227,7 +227,7 @@ export default function ImageTransition() {
           </div>
 
           {/* Screenshot 4 Left Text */}
-          <div className="absolute top-[52%] sm:top-[54%] left-6 md:left-12 flex items-center space-x-2 text-neutral-900 text-lg sm:text-xl md:text-2xl tracking-wide font-normal pointer-events-none">
+          <div className="absolute top-[52%] sm:top-[54%] left-6 md:left-12 flex items-center space-x-2 text-white/80 text-lg sm:text-xl md:text-2xl tracking-wide font-light z-20 pointer-events-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
             <span>AERA Studio</span>
             <span className="opacity-60">◦</span>
             <span>Selected Works</span>
@@ -249,13 +249,13 @@ export default function ImageTransition() {
           {/* Screenshot 4 Right Text: Cyan/Teal accent text as seen in screenshot 4 */}
           <div
             ref={text4Ref}
-            className="absolute top-[52%] sm:top-[54%] right-6 md:right-12 flex items-center space-x-2 text-emerald-400 md:text-cyan-300 text-lg sm:text-xl md:text-2xl tracking-wide font-medium pointer-events-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
+            className="absolute top-[52%] sm:top-[54%] right-6 md:right-12 flex items-center space-x-2 text-white/80 text-lg sm:text-xl md:text-2xl tracking-wide font-light z-20 pointer-events-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
           >
             <span>Lune Department</span>
             <span className="opacity-80">◦</span>
             <span>Fashion Label</span>
             <span className="opacity-40 hidden sm:inline">|</span>
-            <span className="hidden sm:inline text-white/90 text-[11px]">01 · AFTERLIGHT</span>
+            <span className="hidden sm:inline text-white/90 text-sm">01 · AFTERLIGHT</span>
           </div>
         </div>
       </div>
