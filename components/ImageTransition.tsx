@@ -53,19 +53,12 @@ export default function ImageTransition() {
         duration: 1,
       }, 0);
 
-      // Slide 1 scales slightly down for cinematic depth
-      tl.to(slide1Ref.current, {
-        scale: 0.94,
-        ease: 'none',
-        duration: 1,
-      }, 0);
-
       // Text 1 fades out, Text 2 enters
-      tl.to(text1Ref.current, { opacity: 0, y: -20, duration: 0.4 }, 0.2);
+      tl.to(text1Ref.current, { opacity: 0, duration: 0.4 }, 0.2);
       tl.fromTo(
         text2Ref.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.6 },
+        { opacity: 0 },
+        { opacity: 1, duration: 0.6 },
         0.5
       );
 
@@ -77,18 +70,12 @@ export default function ImageTransition() {
         duration: 1,
       }, 1);
 
-      tl.to(slide2Ref.current, {
-        scale: 0.96,
-        ease: 'none',
-        duration: 1,
-      }, 1);
-
       // Text 2 fades out, Text 3 enters
-      tl.to(text2Ref.current, { opacity: 0, y: -20, duration: 0.4 }, 1.2);
+      tl.to(text2Ref.current, { opacity: 0, duration: 0.4 }, 1.2);
       tl.fromTo(
         text3Ref.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.6 },
+        { opacity: 0 },
+        { opacity: 1, duration: 0.6 },
         1.5
       );
 
@@ -100,18 +87,12 @@ export default function ImageTransition() {
         duration: 1,
       }, 2);
 
-      tl.to(slide3Ref.current, {
-        scale: 0.96,
-        ease: 'none',
-        duration: 1,
-      }, 2);
-
       // Text 3 fades out, Text 4 enters
-      tl.to(text3Ref.current, { opacity: 0, y: -20, duration: 0.4 }, 2.2);
+      tl.to(text3Ref.current, { opacity: 0, duration: 0.4 }, 2.2);
       tl.fromTo(
         text4Ref.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6 },
+        { opacity: 0 },
+        { opacity: 1, duration: 0.6 },
         2.5
       );
     }, container);
@@ -147,12 +128,12 @@ export default function ImageTransition() {
         {/* Text 1: Positioned at 54% height */}
         <div
           ref={text1Ref}
-          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex items-center justify-between text-white/80 text-xl sm:text-2xl md:text-3xl tracking-normal font-extralight z-20 pointer-events-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
+          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex items-center justify-between text-white/80 text-lg sm:text-xl md:text-2xl tracking-wide font-light z-20 pointer-events-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
         >
           <div className="flex items-center space-x-2">
             <span>AERA</span>
             <span className="opacity-60">◦</span>
-            <span className="text-sm sm:text-base">アエラ</span>
+            <span className="text-sm sm:text-base md:text-lg">アエラ</span>
             <span className="opacity-40 hidden md:inline">|</span>
             {/* <span className="hidden md:inline text-white/80">Fashion Image Studio</span> */}
           </div>
@@ -184,12 +165,12 @@ export default function ImageTransition() {
         {/* Text 2: Matches Screenshot 2 text */}
         <div
           ref={text2Ref}
-          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex items-center justify-between text-slate-700 md:text-slate-800 text-xl sm:text-2xl md:text-3xl tracking-wide font-light z-20 pointer-events-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]"
+          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex items-center justify-between text-slate-700 md:text-slate-800 text-lg sm:text-xl md:text-2xl tracking-wide font-light z-20 pointer-events-none drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)]"
         >
           <div className="flex items-center space-x-2">
             <span className="font-normal text-slate-900">AERA Studio</span>
             <span className="opacity-60">◦</span>
-            <span className="text-sm sm:text-base">アエラ</span>
+            <span className="text-sm sm:text-base md:text-lg">アエラ</span>
             <span className="opacity-40 hidden md:inline">|</span>
             <span className="hidden md:inline">AERA Studio</span>
           </div>
@@ -224,7 +205,7 @@ export default function ImageTransition() {
         {/* Text 3: Matches Screenshot 3 text (Left: AERA Studio · Services, Center: Visual direction..., Right: Brand Identity...) */}
         <div
           ref={text3Ref}
-          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 text-xl sm:text-2xl md:text-3xl tracking-wide font-light z-20 pointer-events-none"
+          className="absolute top-[52%] sm:top-[54%] left-0 w-full px-6 md:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 text-lg sm:text-xl md:text-2xl tracking-wide font-light z-20 pointer-events-none"
         >
           {/* Left: Rust / Terracotta accent text as seen in screenshot 3 */}
           <div className="flex items-center space-x-2 text-amber-800 font-normal">
@@ -273,7 +254,7 @@ export default function ImageTransition() {
           </div>
 
           {/* Screenshot 4 Left Text */}
-          <div className="absolute top-[52%] sm:top-[54%] left-6 md:left-12 flex items-center space-x-2 text-neutral-900 text-xl sm:text-2xl md:text-3xl tracking-wide font-normal pointer-events-none">
+          <div className="absolute top-[52%] sm:top-[54%] left-6 md:left-12 flex items-center space-x-2 text-neutral-900 text-lg sm:text-xl md:text-2xl tracking-wide font-normal pointer-events-none">
             <span>AERA Studio</span>
             <span className="opacity-60">◦</span>
             <span>Selected Works</span>
@@ -295,7 +276,7 @@ export default function ImageTransition() {
           {/* Screenshot 4 Right Text: Cyan/Teal accent text as seen in screenshot 4 */}
           <div
             ref={text4Ref}
-            className="absolute top-[52%] sm:top-[54%] right-6 md:right-12 flex items-center space-x-2 text-emerald-400 md:text-cyan-300 text-xl sm:text-2xl md:text-3xl tracking-wide font-medium pointer-events-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
+            className="absolute top-[52%] sm:top-[54%] right-6 md:right-12 flex items-center space-x-2 text-emerald-400 md:text-cyan-300 text-lg sm:text-xl md:text-2xl tracking-wide font-medium pointer-events-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
           >
             <span>Lune Department</span>
             <span className="opacity-80">◦</span>
